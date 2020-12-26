@@ -1,0 +1,8 @@
+# Playlist data and metadata
+/lists
+
+# Statistics
+/stats
+
+# Gimp files
+*.xcf
