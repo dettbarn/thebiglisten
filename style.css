@@ -1,0 +1,29 @@
+html {
+	scroll-behavior: smooth;
+}
+
+h2 {
+	color: #006600;
+}
+
+h3 {
+	color: #333399;
+}
+
+div {
+	max-width: 800px;
+	margin: 1em;
+}
+
+td, th {
+	word-wrap: break-word;
+	max-width: 300px;
+}
+
+.tnr {
+	color: #484848;
+}
+
+.artist, .track {
+	width: 250px;
+}
