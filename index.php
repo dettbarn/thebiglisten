@@ -29,7 +29,7 @@
 		function printall($path) {
 			$file = fopen($path, "r");
 			while ($line = fgetcsv($file)) {
-				echo '    <div id="'.$line[0].'"><h3>Vol. '.$line[1].' ('.$line[2].' '.$line[3].') (<a href="'.$line[5].'">&#9658; Link</a>) (<a href="#">Nach oben</a>)</h3>';
+				echo '    <div id="'.$line[0].'"><h3>Vol. '.$line[1].' ('.$line[2].substr($line[4],-2).' '.$line[3].') (<a href="'.$line[5].'">&#9658; Link</a>) (<a href="#">Nach oben</a>)</h3>';
 				printplaylist("lists/".$line[0].".csv");
 				echo "    </div>\n";
 			}
@@ -38,7 +38,7 @@
 		function printoverviewlist($path) {
 			$file = fopen($path, "r");
 			while ($line = fgetcsv($file)) {
-				echo '    <li><a href="#'.$line[0].'">Vol. '.$line[1].' ('.	$line[2].' '.$line[3].")</a></li>\n";
+				echo '    <li><a href="#'.$line[0].'">Vol. '.$line[1].' ('.	$line[2].substr($line[4],-2).' '.$line[3].")</a></li>\n";
 			}
 			fclose($file);
 		}
