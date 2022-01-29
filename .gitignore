@@ -1,8 +1,14 @@
 # Playlist data and metadata
-/lists
+/lists/*.csv
+
+# Content
+*.html
 
 # Statistics
-/stats
+/stats/*.csv
 
 # Gimp files
 *.xcf
+
+# Misc
+*.txt
