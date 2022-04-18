@@ -25,7 +25,7 @@ function parse_collaborations {
 }
 
 function sort_by_most_recent {
-    sort -k 1n -t ',' $1 | sort -k 2r -k 1nr | uniq -f 1 | sort -k 1n
+	sort -k 1n -t ',' $1 | sort -k 2r -k 1nr | uniq -f 1 | sort -k 1n
 }
 
 playlists_with_numbers | remixers_as_artists | keep_only_artists | parse_all_collaborations | sort_by_most_recent
