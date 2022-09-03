@@ -11,7 +11,7 @@ function keep_only_artists {
 }
 
 function parse_collaborations {
-	sed 's/ feat. \| & \| vs \| mit /\n/g' $1
+	sed 's/ feat. \| & \| vs \| mit \| x /\n/g' $1
 }
 
 cat $playlists | remixers_as_artists | keep_only_artists | parse_collaborations | sort | uniq -ci | sort

@@ -21,7 +21,7 @@ function parse_all_collaborations {
 }
 
 function parse_collaborations {
-	sed 's/\([0-9]* \)\(.*\)\( feat. \| & \| vs \| mit \)\(.*\)/\1\2\n\1\4/g' $1
+	sed 's/\([0-9]* \)\(.*\)\( feat. \| & \| vs \| mit \| x \)\(.*\)/\1\2\n\1\4/g' $1
 }
 
 function sort_by_most_recent {
