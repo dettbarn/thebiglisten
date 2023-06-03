@@ -27,3 +27,7 @@ td, th {
 .artist, .track {
 	width: 250px;
 }
+
+.right {
+	float: right;
+}

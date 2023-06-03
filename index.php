@@ -68,7 +68,16 @@
 			</ol>
 		</div>
 	</div>
-	<div><a href="#">Nach oben</a></div>
+	<div>
+		<a href="#">
+			Nach oben
+		</a>
+	</div>
+	</div>
+	<div class="right">
+		<a href="https://github.com/dettbarn/thebiglisten">
+			<img src="./github-mark.svg" alt="link to GitHub repository"/>
+		</a>
 	</div>
 	</body>
 </html>
