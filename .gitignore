@@ -6,6 +6,7 @@
 
 # Statistics
 /stats/*.csv
+counts.csv
 
 # Gimp files
 *.xcf
