@@ -3,7 +3,7 @@
 playlists=`dirname "$0"`/../lists/*.csv
 
 function remixers_as_artists {
-	sed 's/,.*(\(.*\) Remix)/ feat. \1,/g' $1
+	sed 's/,.*(\(.*\) \(Remix\|Edit\))/ feat. \1,/g' $1
 }
 
 function keep_only_artists {

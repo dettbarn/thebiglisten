@@ -7,7 +7,7 @@ function playlists_with_numbers {
 }
 
 function remixers_as_artists {
-	sed 's/\([0-9]*,[^,]*\),.*(\(.*\) Remix)/\1 feat. \2,/g' $1
+	sed 's/\([0-9]*,[^,]*\),.*(\(.*\) \(Remix\|Edit\))/\1 feat. \2,/g' $1
 }
 
 function keep_only_artists {
