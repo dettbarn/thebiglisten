@@ -17,9 +17,9 @@
 			$number = 1;
 			while ($line = fgetcsv($file)) {
 				echo '	<tr>';
-				echo '      <td class="tnr">'.$number.'</td>';
-				echo '		<td class="artist">'.$line[0].'</td>';
-				echo '		<td class="track">'.$line[1].'</td>';
+				echo '      <td class="tnr">' . $number . '</td>';
+				echo '		<td class="artist">' . $line[0] . '</td>';
+				echo '		<td class="track">' . $line[1] . '</td>';
 				echo "	</tr>\n";
 				$number++;
 			}
@@ -29,7 +29,11 @@
 		function printall($path) {
 			$file = fopen($path, "r");
 			while ($line = fgetcsv($file)) {
-				echo '    <div id="'.$line[0].'"><h3>Vol. '.$line[1].' ('.$line[2].substr($line[4],-2).') (<a href="'.$line[5].'">&#9658; Link</a>) (<a href="#">Nach oben</a>)</h3>';
+				$volume = 'Vol. ' . $line[1];
+				$releaseDate = ' ('.$line[2].substr($line[4],-2).')';
+				$youtubeLink = ' (<a href="'.$line[5].'">&#9658; YouTube</a>)';
+				$spotifyLinkIfExists = (empty($line[6]) ? '' : ' (<a href="'.$line[6].'">&#9658; Spotify</a>)');
+				echo '    <div id="'.$line[0].'"><h3>' . $volume . $releaseDate . $youtubeLink . $spotifyLinkIfExists . ' (<a href="#">Nach oben</a>)</h3>';
 				printplaylist("lists/".$line[0].".csv");
 				echo "    </div>\n";
 			}
@@ -38,7 +42,7 @@
 		function printoverviewlist($path) {
 			$file = fopen($path, "r");
 			while ($line = fgetcsv($file)) {
-				echo '    <li><a href="#'.$line[0].'">Vol. '.$line[1].' ('.	$line[2].substr($line[4],-2).")</a></li>\n";
+				echo '    <li><a href="#' . $line[0] . '">Vol. ' . $line[1] . ' (' . $line[2].substr($line[4],-2) . ")</a></li>\n";
 			}
 			fclose($file);
 		}
